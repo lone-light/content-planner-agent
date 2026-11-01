@@ -1,0 +1,12 @@
+{
+  "recordTime": "2026-10-30T22:50:42.4236261+08:00",
+  "source": "actual DeepSeek calls through packaged JAR; synthetic business tools",
+  "validationStatus": "PASSED",
+  "failedStage": null,
+  "semanticReviewRequired": true,
+  "maxSteps": {
+    "saveResume": 5,
+    "priceReversal": 12
+  },
+  "jarSha256": "840386F0133D192332C23019DD15895994A24923763965EF574352B1A42B5AE8"
+}

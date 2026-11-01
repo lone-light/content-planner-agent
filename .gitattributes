@@ -1,0 +1,3 @@
+# Keep source and evidence hashes consistent across platforms.
+* -text
+*.java eol=crlf

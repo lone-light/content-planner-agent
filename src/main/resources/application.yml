@@ -1,0 +1,39 @@
+server:
+  port: ${SERVER_PORT:8081}
+  address: ${SERVER_ADDRESS:127.0.0.1}
+spring:
+  config:
+    import: "optional:file:.env[.properties]"
+  application:
+    name: content-planner-agent
+  datasource:
+    url: ${AGENT_DB_URL:jdbc:mysql://127.0.0.1:3307/content_planner?connectionTimeZone=UTC&characterEncoding=UTF-8}
+    username: ${MYSQL_USER:planner}
+    password: ${MYSQL_PASSWORD:}
+    hikari:
+      maximum-pool-size: 4
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/mysql/schema.sql
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+    serialization:
+      write-dates-as-timestamps: false
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    banner: false
+agent:
+  model-mode: ${AGENT_MODEL_MODE:live}
+  max-steps: ${AGENT_MAX_STEPS:12}
+  simulation-enabled: ${AGENT_SIMULATION_ENABLED:false}
+  catalog-path: ${AGENT_CATALOG_PATH:classpath:data/tool-catalog.json}
+  assets-path: ${AGENT_ASSETS_PATH:classpath:data/assets.json}
+  deepseek:
+    base-url: ${DEEPSEEK_BASE_URL:https://api.deepseek.com}
+    model: ${DEEPSEEK_MODEL:deepseek-flash}
+    api-key: ${DEEPSEEK_API_KEY:}
+    timeout-seconds: ${DEEPSEEK_TIMEOUT_SECONDS:45}

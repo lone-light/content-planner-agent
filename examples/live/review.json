@@ -1,0 +1,40 @@
+{
+  "recordTime": "2026-10-31T22:47:56.7224323+08:00",
+  "result": "PASSED",
+  "source": "assertions over actual response files, trace events and current JAR",
+  "jarSha256": "840386F0133D192332C23019DD15895994A24923763965EF574352B1A42B5AE8",
+  "tests": 72,
+  "realScenarios": 9,
+  "modelResponses": 34,
+  "providerReportedTotalTokens": 63823,
+  "budgetObservationSequence": 7,
+  "budgetNextActionSequence": 9,
+  "failureObservationSequence": 13,
+  "failureNextActionSequence": 15,
+  "checks": [
+    "springAiOfficialTransport",
+    "ledgerReconciliation",
+    "savedConstraints",
+    "budgetChangesAction",
+    "toolFailureChangesAction",
+    "duplicateDoesNotExecute",
+    "saveRollbackAndResume",
+    "priceChangeChangesPlan",
+    "missingInputsDoNotExecute",
+    "logicalRelations",
+    "indexedQueries",
+    "constantReadQueryCounts",
+    "ideaInspectionMatchesSource",
+    "currentJarMatchesArtifacts"
+  ],
+  "traceSha256": {
+    "examples/live/main/budget-replan/trace.jsonl": "4936CC110717AFA3E139CD230ED4E984D32CB6B626A9E63FFD175778CC9A64AE",
+    "examples/live/main/impossible-budget/trace.jsonl": "DDC2C6CBF3921E22065F5B82E29487776FD14F857C5783E0F2D4B17A927F7B95",
+    "examples/live/main/missing-budget/trace.jsonl": "F1B2C814313FEBFF3A698C39F604DD3FB6CB327837920DEE7F8D9A6A2EF6383B",
+    "examples/live/main/missing-deadline/trace.jsonl": "5A6E3A45859AE5C5876CD4579D56502B9E384FAD43A293DF08CBDD209056B2FD",
+    "examples/live/main/normal/trace.jsonl": "1DD8616313EB4B95FE576706C6BE361EEAEB1FA93836F0EEFF9A9F7148455861",
+    "examples/live/main/tool-failure/trace.jsonl": "71619D4D3E96B2FECA4F020A0C51C8D6D00BC632CD0A51F8455D01F63FF4E99E",
+    "examples/live/extended/price-reversal/trace.jsonl": "5A343C3E5E31B772A2AD630617A1E146B5111F4BD926B8036F74B6A7F18FF6DC",
+    "examples/live/extended/save-resume/trace.jsonl": "9D5F06BAA6AAA04B2E7165F0159D7CA9B91E333CEDA9E2E689AEE635909B2508"
+  }
+}

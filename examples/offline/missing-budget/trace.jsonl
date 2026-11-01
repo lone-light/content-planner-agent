@@ -1,0 +1,1 @@
+{"sequence":1,"runId":"e10d842b-e3be-410a-b76d-072b1c2cc3f1","step":0,"recordTime":"2026-10-30T14:48:00.3382248Z","modelMode":"mock","type":"INPUT_CHECK","detail":{"reasonCode":"MISSING_INPUT","status":"NEEDS_INPUT","missingFields":["budgetUnits"]}}

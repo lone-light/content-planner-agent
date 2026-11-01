@@ -1,0 +1,194 @@
+{
+  "recordTime": "2026-10-31T22:47:56.2110075+08:00",
+  "source": "Maven test report XML; environment properties intentionally excluded",
+  "modelMode": "mock/local-protocol-fixtures",
+  "realModelDecisionVerified": false,
+  "tests": 72,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "suites": [
+    {
+      "name": "com.lonelight.contentplanner.acceptance.AcceptanceEvidenceTest",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 22.23,
+      "cases": [
+        "missingBudget",
+        "inputValidationAndHttpErrors",
+        "expiredDeadline",
+        "budgetReplan",
+        "toolFailure",
+        "normal",
+        "noAssets",
+        "estimateFailureIsObservedBeforeRetryAndReplanning",
+        "saveFailureAndResume",
+        "missingDeadline",
+        "repeatedRequest",
+        "impossibleBudget"
+      ]
+    },
+    {
+      "name": "com.lonelight.contentplanner.integration.AgentRunnerBoundaryTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 1.994,
+      "cases": [
+        "savingAtTheLastAllowedStepDoesNotHideTheUnfinishedModelLoop",
+        "repeatedFalseCompletionIsRejectedAndBounded",
+        "generationWithoutAQuoteDoesNotExecuteOrBill",
+        "saveWithoutASuccessfulScriptIsRejected",
+        "switchingPlansKeepsSpentCostsAndDoesNotBorrowTheOldScriptsStatus(String)[1]",
+        "switchingPlansKeepsSpentCostsAndDoesNotBorrowTheOldScriptsStatus(String)[2]",
+        "modelConnectionFailureDoesNotSilentlyFallbackToMock",
+        "malformedActionConsumesAStepRatherThanLoopingForever",
+        "aModelCannotBypassAnOverBudgetQuote"
+      ]
+    },
+    {
+      "name": "com.lonelight.contentplanner.integration.CatalogVariationTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 1.337,
+      "cases": [
+        "changedDataVersionCannotSilentlyReplayAnOldCompletedTask(Path)",
+        "decimalCostsAreSummedExactly(Path)",
+        "replacingPricesChangesTheChosenModeWithoutChangingAgentCode(Path)",
+        "mockAndLiveNamespacesCannotReadEachOthersTasks"
+      ]
+    },
+    {
+      "name": "com.lonelight.contentplanner.integration.DatabaseQueryTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 1.879,
+      "cases": [
+        "missingLogicalParentPreventsOrphanInsertInTheSameTransaction",
+        "readsAndReplayHaveConstantQueryCountsRegardlessOfAssociatedItems(int)[1]",
+        "readsAndReplayHaveConstantQueryCountsRegardlessOfAssociatedItems(int)[2]",
+        "schemaHasOnlyLogicalRelationsAndPointLookupsUseUniqueIndexes",
+        "logicalRelationRejectsAnotherRequestsPlanBeforeWritingAnything"
+      ]
+    },
+    {
+      "name": "com.lonelight.contentplanner.integration.DeepSeekLoopIntegrationTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 3.003,
+      "cases": [
+        "malformedFinishFieldsAreFedBackForRepairInsteadOfCrashing",
+        "toolFailureFeedbackRetainsAssetsAndDrivesRetryOverHttp",
+        "toolResultsReachTheNextHttpDecisionAndChangeThePath(int, String, int, int)[1]",
+        "toolResultsReachTheNextHttpDecisionAndChangeThePath(int, String, int, int)[2]",
+        "misleadingCompletionTextCannotReplaceSavedFinancialFacts",
+        "misleadingIncompleteTextCannotClaimSavingOrEraseTheBudgetGap",
+        "providerFailureAfterSuccessCanResumeWithoutRegeneratingOrRebilling"
+      ]
+    },
+    {
+      "name": "com.lonelight.contentplanner.integration.DeepSeekProtocolTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 1.717,
+      "cases": [
+        "invalidKeyCharactersCannotReachHeadersOrLogs",
+        "malformedActionReturnsARepairableObservation",
+        "defaultsUseTheRealAdapterAndFailExplicitlyWithoutCredentials",
+        "truncatedOutputIsNotExecutedAsACompleteAction",
+        "unknownActionFieldsAreRejected",
+        "missingKeyFailsBeforeNetworkAndDoesNotFallback",
+        "emptyCompletionReturnsAnExplicitRepairableResponseError",
+        "timeoutIsBoundedAndExplicit",
+        "remotePlainHttpAndCredentialsInUrlsAreRejected",
+        "providerHttpErrorIsExplicitWithoutLeakingTheResponseBody",
+        "sendsTheDocumentedJsonProtocolAndExtractsOnlyTheFinalContent"
+      ]
+    },
+    {
+      "name": "com.lonelight.contentplanner.integration.MySqlPersistenceTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 2.821,
+      "cases": [
+        "preservesCaseSensitiveRequestIdsAndRejectsChangedInput",
+        "savesUnicodeAndReplaysAfterApplicationRestart",
+        "rollsBackFailedSaveAndResumesWithoutRepeatingSuccessfulTools"
+      ]
+    },
+    {
+      "name": "com.lonelight.contentplanner.integration.PersistenceRestartTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 1.146,
+      "cases": [
+        "mysqlSurvivesApplicationRestartAndResumesOnlyTheFailedStep"
+      ]
+    },
+    {
+      "name": "com.lonelight.contentplanner.integration.PlanServiceTest",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 4.443,
+      "cases": [
+        "expiredDeadlineStopsBeforeAnyToolOrModel",
+        "noFeasiblePlanReportsGapWithoutGeneratingOrSaving",
+        "insufficientTimeIsARealConstraintEvenWithEnoughBudget",
+        "repeatedRequestReplaysWithoutExtraToolsChargesOrPlans",
+        "noMaterialsRequestsInputInsteadOfInventingAPlan",
+        "postInsertFailureRollsBackPlanLedgerAndSuccessCheckpointThenResumes",
+        "normalPlanIsActuallySavedWithReconciledCostsAndDependencies",
+        "changedInputWithSameIdIsAConflictAndPreservesTheOriginal",
+        "missingBudgetDoesNotInvokeAModelOrPaidTools",
+        "concurrentDuplicatesUseTheSamePersistedResult",
+        "missingDeadlineIsNotGuessed",
+        "oneToolFailureRetainsSuccessfulSearchAndOnlyBillsTheSuccessfulRetry",
+        "overBudgetQuoteChangesTheNextChoiceAndNeverChargesRejectedGeneration",
+        "zeroBudgetDoesNotChargeAnUnaffordableSearch",
+        "equivalentDecimalAndTimezoneRepresentationsReplayTheSameRequest"
+      ]
+    },
+    {
+      "name": "com.lonelight.contentplanner.unit.DirectoryStructureTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.1,
+      "cases": [
+        "runtimeClientsAndModelsHaveDedicatedResponsibilityPackages",
+        "javaPackageDeclarationsMatchTheirSourceDirectories"
+      ]
+    },
+    {
+      "name": "com.lonelight.contentplanner.unit.ServiceArchitectureTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.023,
+      "cases": [
+        "serviceContractsAreInterfacesWithImplementationsInTheImplPackage",
+        "applicationLayersInjectServiceInterfacesThroughConstructors",
+        "persistenceServicesExposeMpContractsAndReuseMpImplementations"
+      ]
+    }
+  ]
+}

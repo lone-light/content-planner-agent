@@ -1,0 +1,14 @@
+version	8.4.7
+physical_foreign_keys	0
+orphan_plans	0
+agent_task	InnoDB	utf8mb4_0900_bin
+saved_plan	InnoDB	utf8mb4_0900_bin
+agent_task	create_time	datetime
+agent_task	update_time	datetime
+saved_plan	save_time	datetime
+agent_task	0	PRIMARY	1	id	A	9	NULL	NULL		BTREE			YES	NULL
+agent_task	0	uk_task_request	1	model_mode	A	2	NULL	NULL		BTREE			YES	NULL
+agent_task	0	uk_task_request	2	request_id	A	9	NULL	NULL		BTREE			YES	NULL
+saved_plan	0	PRIMARY	1	id	A	6	NULL	NULL		BTREE			YES	NULL
+saved_plan	0	uk_saved_request	1	model_mode	A	2	NULL	NULL		BTREE			YES	NULL
+saved_plan	0	uk_saved_request	2	request_id	A	6	NULL	NULL		BTREE			YES	NULL

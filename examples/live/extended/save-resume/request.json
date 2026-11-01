@@ -1,0 +1,11 @@
+{
+  "requestId": "extended-c8cabf5ba9-recovery",
+  "topic": "字幕活动",
+  "budgetUnits": 20,
+  "deadlineTime": "2026-10-30T16:50:19.0800768+00:00",
+  "simulate": {
+    "failAfterInsert": true,
+    "failTool": "SAVE_PLAN",
+    "failures": 2
+  }
+}

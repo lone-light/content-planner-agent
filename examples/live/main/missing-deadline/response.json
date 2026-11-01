@@ -1,0 +1,56 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "requestId": "live-20261030144948-860556-missing-deadline",
+    "status": "NEEDS_INPUT",
+    "reasonCode": "MISSING_INPUT",
+    "message": "任务需要补充信息，方案尚未完成；请补充：deadlineTime",
+    "missingFields": [
+      "deadlineTime"
+    ],
+    "modelMode": "live",
+    "modelIdentity": "spring-ai:deepseek:https://api.deepseek.com/chat/completions:deepseek-flash",
+    "toolsProvenance": "LOCAL_SYNTHETIC_TOOLS",
+    "dataVersion": "8446bde95ded22dc426c873e9f4acf89d967462fc3d41959da639c0d3c81efda",
+    "budgetUnits": 10.0,
+    "spentUnits": 0,
+    "remainingEstimatedUnits": null,
+    "projectedTotalUnits": null,
+    "deadlineTime": null,
+    "estimatedFinishTime": null,
+    "elapsedSimulatedMinutes": 0,
+    "totalModelSteps": 0,
+    "saved": false,
+    "savedPlan": null,
+    "taskPlan": [
+      {
+        "id": "assets",
+        "title": "检索活动素材",
+        "dependsOn": [],
+        "status": "PENDING"
+      },
+      {
+        "id": "script",
+        "title": "生成活动脚本",
+        "dependsOn": [
+          "assets"
+        ],
+        "status": "PENDING"
+      },
+      {
+        "id": "save",
+        "title": "核对并保存方案",
+        "dependsOn": [
+          "script"
+        ],
+        "status": "PENDING"
+      }
+    ],
+    "candidates": [],
+    "quotes": [],
+    "steps": [],
+    "replayed": false,
+    "resumed": false
+  }
+}

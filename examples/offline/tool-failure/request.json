@@ -1,0 +1,1 @@
+{"requestId":"evidence-tool-failure","topic":"字幕活动","budgetUnits":10,"deadlineTime":"2030-01-01T12:00:00Z","preferredMode":"STANDARD","simulate":{"failTool":"GENERATE_SCRIPT","failures":1}}

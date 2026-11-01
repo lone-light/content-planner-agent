@@ -1,0 +1,1 @@
+{"sequence":1,"runId":"d1f289b7-b0fe-4462-916c-5c649ce786a9","step":0,"recordTime":"2026-10-30T14:48:04.1114748Z","modelMode":"mock","type":"INPUT_CHECK","detail":{"reasonCode":"MISSING_INPUT","status":"NEEDS_INPUT","missingFields":["deadlineTime"]}}

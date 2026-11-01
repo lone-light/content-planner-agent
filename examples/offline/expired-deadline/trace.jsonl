@@ -1,0 +1,1 @@
+{"sequence":1,"runId":"f4e34047-092d-49c4-a645-3fd7c1717982","step":0,"recordTime":"2026-10-30T14:48:00.8642998Z","modelMode":"mock","type":"INPUT_CHECK","detail":{"reasonCode":"DEADLINE_EXPIRED","status":"INCOMPLETE","missingFields":[]}}

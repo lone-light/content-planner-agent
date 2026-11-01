@@ -1,0 +1,18 @@
+Command: mvn -B clean verify
+Database: isolated MySQL 8.4.7 via Testcontainers
+Model: offline/local protocol fixtures; no paid model calls
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.23 s -- in com.lonelight.contentplanner.acceptance.AcceptanceEvidenceTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.994 s -- in com.lonelight.contentplanner.integration.AgentRunnerBoundaryTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.337 s -- in com.lonelight.contentplanner.integration.CatalogVariationTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.879 s -- in com.lonelight.contentplanner.integration.DatabaseQueryTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.003 s -- in com.lonelight.contentplanner.integration.DeepSeekLoopIntegrationTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.717 s -- in com.lonelight.contentplanner.integration.DeepSeekProtocolTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.821 s -- in com.lonelight.contentplanner.integration.MySqlPersistenceTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.146 s -- in com.lonelight.contentplanner.integration.PersistenceRestartTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.443 s -- in com.lonelight.contentplanner.integration.PlanServiceTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.100 s -- in com.lonelight.contentplanner.unit.DirectoryStructureTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in com.lonelight.contentplanner.unit.ServiceArchitectureTest
+[INFO] Tests run: 72, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
+[INFO] Total time:  56.971 s
+[INFO] Finished at: 2026-10-31T22:46:59+08:00

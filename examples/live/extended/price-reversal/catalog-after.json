@@ -1,0 +1,24 @@
+{
+  "version": "live-price-reversal-v1",
+  "currency": "SIMULATED_UNITS",
+  "failureBilling": "SUCCESS_ONLY",
+  "timePolicy": "SERIAL_SIMULATED_MINUTES_PER_ATTEMPT",
+  "search": {
+    "costUnits": 1,
+    "durationMinutes": 1
+  },
+  "generate": {
+    "STANDARD": {
+      "costUnits": 6,
+      "durationMinutes": 10
+    },
+    "LEAN": {
+      "costUnits": 10,
+      "durationMinutes": 5
+    }
+  },
+  "save": {
+    "costUnits": 1,
+    "durationMinutes": 1
+  }
+}

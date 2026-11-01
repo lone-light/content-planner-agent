@@ -1,0 +1,107 @@
+@baseUrl = http://127.0.0.1:8081
+@run = manual-001
+
+### 健康检查
+GET {{baseUrl}}/api/health
+
+### 正常完成；预期 COMPLETED、saved=true、费用 12
+POST {{baseUrl}}/api/plans
+Content-Type: application/json
+
+{
+  "requestId": "{{run}}-normal",
+  "topic": "字幕活动",
+  "budgetUnits": 20,
+  "deadlineTime": "2030-01-01T12:00:00Z",
+  "preferredMode": "STANDARD"
+}
+
+### 查询任务
+GET {{baseUrl}}/api/plans/{{run}}-normal
+
+### 查看动作与工具结果
+GET {{baseUrl}}/api/plans/{{run}}-normal/trace
+
+### 预算调整；默认费用表下标准方案 12，精简方案 8
+POST {{baseUrl}}/api/plans
+Content-Type: application/json
+
+{
+  "requestId": "{{run}}-budget",
+  "topic": "字幕活动",
+  "budgetUnits": 10,
+  "deadlineTime": "2030-01-01T12:00:00Z",
+  "preferredMode": "STANDARD"
+}
+
+### 缺预算；预期 NEEDS_INPUT，模型步骤和费用为 0
+POST {{baseUrl}}/api/plans
+Content-Type: application/json
+
+{
+  "requestId": "{{run}}-missing-budget",
+  "topic": "字幕活动",
+  "deadlineTime": "2030-01-01T12:00:00Z"
+}
+
+### 缺截止时间；预期 NEEDS_INPUT
+POST {{baseUrl}}/api/plans
+Content-Type: application/json
+
+{
+  "requestId": "{{run}}-missing-deadline",
+  "topic": "字幕活动",
+  "budgetUnits": 10
+}
+
+### 脚本工具失败一次；检查失败记录及模型后续动作
+POST {{baseUrl}}/api/plans
+Content-Type: application/json
+
+{
+  "requestId": "{{run}}-tool-failure",
+  "topic": "字幕活动",
+  "budgetUnits": 10,
+  "deadlineTime": "2030-01-01T12:00:00Z",
+  "preferredMode": "STANDARD",
+  "simulate": {
+    "failTool": "GENERATE_SCRIPT",
+    "failures": 1
+  }
+}
+
+### 工具失败后的决策记录
+GET {{baseUrl}}/api/plans/{{run}}-tool-failure/trace
+
+### 无可行预算；预期 INCOMPLETE、saved=false
+POST {{baseUrl}}/api/plans
+Content-Type: application/json
+
+{
+  "requestId": "{{run}}-impossible",
+  "topic": "字幕活动",
+  "budgetUnits": 2,
+  "deadlineTime": "2030-01-01T12:00:00Z"
+}
+
+### 保存事务故障；核对回滚记录及实际保存状态
+POST {{baseUrl}}/api/plans
+Content-Type: application/json
+
+{
+  "requestId": "{{run}}-save-failure",
+  "topic": "字幕活动",
+  "budgetUnits": 20,
+  "deadlineTime": "2030-01-01T12:00:00Z",
+  "simulate": {
+    "failTool": "SAVE_PLAN",
+    "failures": 2,
+    "failAfterInsert": true
+  }
+}
+
+### 保存失败后的决策记录
+GET {{baseUrl}}/api/plans/{{run}}-save-failure/trace
+
+### 显式续跑；核对成功步骤未重复收费
+POST {{baseUrl}}/api/plans/{{run}}-save-failure/resume

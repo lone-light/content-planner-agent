@@ -1,0 +1,304 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "requestId": "extended-c8cabf5ba9-prices",
+    "status": "COMPLETED",
+    "reasonCode": "OK",
+    "message": "方案已保存（saved-db0661380f857292）；已发生费用 8，预算 10。",
+    "missingFields": [],
+    "modelMode": "live",
+    "modelIdentity": "spring-ai:deepseek:https://api.deepseek.com/chat/completions:deepseek-flash",
+    "toolsProvenance": "LOCAL_SYNTHETIC_TOOLS",
+    "dataVersion": "de10ed070b9c68dede3aa30873020da95c30da173b63e6ba4689e66a8b944fee",
+    "budgetUnits": 10.0,
+    "spentUnits": 8,
+    "remainingEstimatedUnits": 0,
+    "projectedTotalUnits": 8,
+    "deadlineTime": "2026-10-30T16:50:35.3234624Z",
+    "estimatedFinishTime": "2026-10-30T15:02:35.4998255Z",
+    "elapsedSimulatedMinutes": 12,
+    "totalModelSteps": 5,
+    "saved": true,
+    "savedPlan": {
+      "savedPlanId": "saved-db0661380f857292",
+      "requestId": "extended-c8cabf5ba9-prices",
+      "plan": {
+        "planId": "plan-ee010b4193d719d0",
+        "planMode": "STANDARD",
+        "assetIds": [
+          "P01"
+        ]
+      },
+      "steps": [
+        {
+          "id": "assets",
+          "title": "检索活动素材",
+          "dependsOn": [],
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "script",
+          "title": "生成活动脚本",
+          "dependsOn": [
+            "assets"
+          ],
+          "status": "SUCCEEDED"
+        },
+        {
+          "id": "save",
+          "title": "核对并保存方案",
+          "dependsOn": [
+            "script"
+          ],
+          "status": "SUCCEEDED"
+        }
+      ],
+      "script": {
+        "scriptId": "script-88286dc890548fe6",
+        "planId": "plan-ee010b4193d719d0",
+        "title": "字幕活动：标准活动方案",
+        "content": "开场：今天围绕「字幕活动」，看看这些内容。\n要点：支持字幕编辑；支持调整字幕样式。\n画面：依次呈现上述要点，对应镜头标注素材编号 P01。\n结尾：你最关注哪一点？欢迎在评论区交流。",
+        "assetIds": [
+          "P01"
+        ],
+        "provenance": "LOCAL_SYNTHETIC_TEMPLATE"
+      },
+      "totalCostUnits": 8,
+      "estimatedFinishTime": "2026-10-30T15:02:35.4998255Z",
+      "saveTime": "2026-10-30T14:50:41.3342067Z",
+      "modelMode": "live",
+      "toolsProvenance": "LOCAL_SYNTHETIC_TOOLS"
+    },
+    "taskPlan": [
+      {
+        "id": "assets",
+        "title": "检索活动素材",
+        "dependsOn": [],
+        "status": "SUCCEEDED"
+      },
+      {
+        "id": "script",
+        "title": "生成活动脚本",
+        "dependsOn": [
+          "assets"
+        ],
+        "status": "SUCCEEDED"
+      },
+      {
+        "id": "save",
+        "title": "核对并保存方案",
+        "dependsOn": [
+          "script"
+        ],
+        "status": "SUCCEEDED"
+      }
+    ],
+    "candidates": [
+      {
+        "planId": "plan-ee010b4193d719d0",
+        "planMode": "STANDARD",
+        "assetIds": [
+          "P01"
+        ]
+      }
+    ],
+    "quotes": [
+      {
+        "quoteId": "quote-058166d70156a5e9",
+        "planId": "plan-ee010b4193d719d0",
+        "spentUnits": 1,
+        "remainingUnits": 7,
+        "projectedTotalUnits": 8,
+        "remainingMinutes": 11,
+        "estimatedFinishTime": "2026-10-30T15:02:35.4998255Z",
+        "feasible": true,
+        "budgetGapUnits": 0,
+        "deadlineGapMinutes": 0,
+        "problems": []
+      }
+    ],
+    "steps": [
+      {
+        "runId": "a2dd398d-6c94-499e-9d39-b226ec20c067",
+        "step": 1,
+        "tool": "SEARCH_ASSETS",
+        "arguments": {
+          "query": "字幕活动"
+        },
+        "status": "SUCCEEDED",
+        "observation": {
+          "success": true,
+          "code": "OK",
+          "message": "工具执行成功",
+          "data": {
+            "assets": [
+              {
+                "id": "P01",
+                "title": "字幕编辑功能资料",
+                "tags": [
+                  "字幕",
+                  "字幕编辑",
+                  "subtitle",
+                  "caption"
+                ],
+                "facts": [
+                  "支持字幕编辑",
+                  "支持调整字幕样式"
+                ],
+                "source": "合成产品资料 P01；不对应真实产品承诺"
+              }
+            ],
+            "count": 1
+          },
+          "chargedUnits": 1,
+          "durationMinutes": 1,
+          "reused": false,
+          "retryable": false
+        }
+      },
+      {
+        "runId": "a2dd398d-6c94-499e-9d39-b226ec20c067",
+        "step": 2,
+        "tool": "ESTIMATE_PLAN",
+        "arguments": {
+          "planMode": "STANDARD",
+          "assetIds": [
+            "P01"
+          ]
+        },
+        "status": "SUCCEEDED",
+        "observation": {
+          "success": true,
+          "code": "OK",
+          "message": "报价已计算；可行性以 feasible 为准",
+          "data": {
+            "quote": {
+              "quoteId": "quote-058166d70156a5e9",
+              "planId": "plan-ee010b4193d719d0",
+              "spentUnits": 1,
+              "remainingUnits": 7,
+              "projectedTotalUnits": 8,
+              "remainingMinutes": 11,
+              "estimatedFinishTime": "2026-10-30T15:02:35.4998255Z",
+              "feasible": true,
+              "budgetGapUnits": 0,
+              "deadlineGapMinutes": 0,
+              "problems": []
+            },
+            "plan": {
+              "planId": "plan-ee010b4193d719d0",
+              "planMode": "STANDARD",
+              "assetIds": [
+                "P01"
+              ]
+            }
+          },
+          "chargedUnits": 0,
+          "durationMinutes": 0,
+          "reused": false,
+          "retryable": false
+        }
+      },
+      {
+        "runId": "a2dd398d-6c94-499e-9d39-b226ec20c067",
+        "step": 3,
+        "tool": "GENERATE_SCRIPT",
+        "arguments": {
+          "planId": "plan-ee010b4193d719d0",
+          "quoteId": "quote-058166d70156a5e9"
+        },
+        "status": "SUCCEEDED",
+        "observation": {
+          "success": true,
+          "code": "OK",
+          "message": "工具执行成功",
+          "data": {
+            "scriptId": "script-88286dc890548fe6",
+            "planId": "plan-ee010b4193d719d0",
+            "title": "字幕活动：标准活动方案",
+            "content": "开场：今天围绕「字幕活动」，看看这些内容。\n要点：支持字幕编辑；支持调整字幕样式。\n画面：依次呈现上述要点，对应镜头标注素材编号 P01。\n结尾：你最关注哪一点？欢迎在评论区交流。",
+            "assetIds": [
+              "P01"
+            ],
+            "provenance": "LOCAL_SYNTHETIC_TEMPLATE"
+          },
+          "chargedUnits": 6,
+          "durationMinutes": 10,
+          "reused": false,
+          "retryable": false
+        }
+      },
+      {
+        "runId": "a2dd398d-6c94-499e-9d39-b226ec20c067",
+        "step": 4,
+        "tool": "SAVE_PLAN",
+        "arguments": {
+          "planId": "plan-ee010b4193d719d0"
+        },
+        "status": "SUCCEEDED",
+        "observation": {
+          "success": true,
+          "code": "OK",
+          "message": "工具执行成功",
+          "data": {
+            "savedPlanId": "saved-db0661380f857292",
+            "requestId": "extended-c8cabf5ba9-prices",
+            "plan": {
+              "planId": "plan-ee010b4193d719d0",
+              "planMode": "STANDARD",
+              "assetIds": [
+                "P01"
+              ]
+            },
+            "steps": [
+              {
+                "id": "assets",
+                "title": "检索活动素材",
+                "dependsOn": [],
+                "status": "SUCCEEDED"
+              },
+              {
+                "id": "script",
+                "title": "生成活动脚本",
+                "dependsOn": [
+                  "assets"
+                ],
+                "status": "SUCCEEDED"
+              },
+              {
+                "id": "save",
+                "title": "核对并保存方案",
+                "dependsOn": [
+                  "script"
+                ],
+                "status": "SUCCEEDED"
+              }
+            ],
+            "script": {
+              "scriptId": "script-88286dc890548fe6",
+              "planId": "plan-ee010b4193d719d0",
+              "title": "字幕活动：标准活动方案",
+              "content": "开场：今天围绕「字幕活动」，看看这些内容。\n要点：支持字幕编辑；支持调整字幕样式。\n画面：依次呈现上述要点，对应镜头标注素材编号 P01。\n结尾：你最关注哪一点？欢迎在评论区交流。",
+              "assetIds": [
+                "P01"
+              ],
+              "provenance": "LOCAL_SYNTHETIC_TEMPLATE"
+            },
+            "totalCostUnits": 8,
+            "estimatedFinishTime": "2026-10-30T15:02:35.4998255Z",
+            "saveTime": "2026-10-30T14:50:41.3342067Z",
+            "modelMode": "live",
+            "toolsProvenance": "LOCAL_SYNTHETIC_TOOLS"
+          },
+          "chargedUnits": 1,
+          "durationMinutes": 1,
+          "reused": false,
+          "retryable": false
+        }
+      }
+    ],
+    "replayed": false,
+    "resumed": false
+  }
+}

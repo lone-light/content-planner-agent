@@ -1,0 +1,65 @@
+{
+  "recordTime": "2026-10-30T22:50:13.6420488+08:00",
+  "modelMode": "live",
+  "source": "actual HTTP requests; review trace for semantic decision quality",
+  "validationStatus": "PASSED",
+  "failedStage": null,
+  "semanticReviewRequired": true,
+  "cases": [
+    {
+      "case": "normal",
+      "requestId": "live-20261030144948-860556-normal",
+      "status": "COMPLETED",
+      "spentUnits": 12,
+      "saved": true,
+      "actionCount": 5
+    },
+    {
+      "case": "budget-replan",
+      "requestId": "live-20261030144948-860556-budget-replan",
+      "status": "COMPLETED",
+      "spentUnits": 8,
+      "saved": true,
+      "actionCount": 6
+    },
+    {
+      "case": "tool-failure",
+      "requestId": "live-20261030144948-860556-tool-failure",
+      "status": "COMPLETED",
+      "spentUnits": 8,
+      "saved": true,
+      "actionCount": 7
+    },
+    {
+      "case": "impossible-budget",
+      "requestId": "live-20261030144948-860556-impossible-budget",
+      "status": "INCOMPLETE",
+      "spentUnits": 1,
+      "saved": false,
+      "actionCount": 4
+    },
+    {
+      "case": "duplicate",
+      "requestId": "live-20261030144948-860556-normal",
+      "status": "COMPLETED",
+      "replayed": true,
+      "actionCount": 0
+    },
+    {
+      "case": "missing-budget",
+      "requestId": "live-20261030144948-860556-missing-budget",
+      "status": "NEEDS_INPUT",
+      "spentUnits": 0,
+      "saved": false,
+      "actionCount": 0
+    },
+    {
+      "case": "missing-deadline",
+      "requestId": "live-20261030144948-860556-missing-deadline",
+      "status": "NEEDS_INPUT",
+      "spentUnits": 0,
+      "saved": false,
+      "actionCount": 0
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "recordTime": "2026-10-30T22:51:08.1914276+08:00",
+  "validationStatus": "PASSED",
+  "jarSha256": "840386F0133D192332C23019DD15895994A24923763965EF574352B1A42B5AE8",
+  "stack": "Spring AI 1.1.8 / MyBatis-Plus 3.5.18 / MySQL 8.4.7",
+  "source": "actual packaged application, official DeepSeek service, synthetic business tools"
+}

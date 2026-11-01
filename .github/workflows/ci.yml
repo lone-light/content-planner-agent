@@ -1,0 +1,25 @@
+name: Java verification
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - run: mvn -B verify
+      - name: Export test summary
+        if: always() && hashFiles('target/surefire-reports/TEST-*.xml') != ''
+        shell: pwsh
+        run: ./scripts/export-test-results.ps1 -OutputPath target/test-results.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: offline-verification
+          path: |
+            target/test-results.json
+            target/acceptance-evidence/
+            target/local-model-loop/
